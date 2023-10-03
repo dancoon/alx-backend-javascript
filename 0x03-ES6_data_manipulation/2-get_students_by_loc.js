@@ -1,9 +1,3 @@
 export default function getStudentsByLocation(students, city) {
-  if (students instanceof Array) {
-    return students.filter((obj) => {
-      if (obj.location === city) return true;
-      false;
-    });
-  }
-  return [];
+  return students instanceof Array ? students.filter((obj) => (obj.location === city)) : [];
 }
